@@ -11,6 +11,27 @@
     margin-right: 10px;
 }
 
+.dropdown-toggle::after {
+    display: none;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    user-select: none;
+}
+
+.navbar .icon-container .material-symbols-outlined.dropdown-toggle::after {
+    display: none;
+}
+
+
+.icon-container .dropdown-menu {
+    position: absolute;
+    right: 0;     /* 우측 정렬 */
+    top: 100%;    /* 아이콘 바로 아래에 위치 */
+    width: 150px; /* 원하는 너비 설정 */
+}
+
 .main_body {
     display: flex;
     justify-content: center;
