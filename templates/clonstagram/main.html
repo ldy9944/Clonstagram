@@ -103,8 +103,8 @@
           </p>
         </div>
         <div class="feed_reply">
-          <span class="feed_txt"> <b> mychew </b> 사랑해 씹련아 </span>
-          <span class="feed_txt"> <b> cho </b> 나도 사랑해 시발 </span>
+          <span class="feed_txt"> <b> mychew </b> 댓글 모델 미구현 </span>
+          <span class="feed_txt"> <b> cho </b> 추후 구현 예정 </span>
         </div>
       </div>
       {% endfor %}
@@ -218,14 +218,14 @@
       const modal_add_feed = document.getElementById("modal_add_feed");
       const buttonAddFeed = document.getElementById("add_feed");
       const close_modal = document.getElementById("close_modal")
-      
+
       buttonAddFeed.addEventListener("click", e => {
         modal_add_feed.style.display = "flex";
         document.body.style.overflowY = "hidden";
-    });
+      });
 
       close_modal.addEventListener("click", e => {
-          modal_add_feed.style.display = "none";
+        modal_add_feed.style.display = "none";
       });
 
       darkModeToggle.addEventListener('click', function () {
@@ -248,7 +248,6 @@
         toggleText.textContent = isDarkMode ? "라이트모드" : "다크모드";
       });
     });
-
 
     $(document).ready(function () {
       $("#dropdownMenuButton").click(function () {
