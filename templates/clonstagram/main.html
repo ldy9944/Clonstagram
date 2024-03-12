@@ -203,7 +203,7 @@
       <div class="modal_title">
         <div class="modal_title_side"></div>
         <div> 새 게시물 </div>
-        <div class="modal_title_side">
+        <div id="modal_title_side2">
           <button id="close_modal" type="button" class="btn-close" aria-label="Close"></button>
         </div>
       </div>
@@ -215,9 +215,9 @@
       var modalHeader = document.querySelector('.modal-header');
       var dropdown = document.querySelector('.dropdown-menu');
       var navbar = document.querySelector('.navbar');
+      const btn_close = document.getElementById("modal_title_side2")
       const modal_add_feed = document.getElementById("modal_add_feed");
       const buttonAddFeed = document.getElementById("add_feed");
-      const close_modal = document.getElementById("close_modal")
 
       buttonAddFeed.addEventListener("click", e => {
         modal_add_feed.style.display = "flex";
@@ -236,13 +236,13 @@
           modalHeader.setAttribute('data-bs-theme', 'dark');
           dropdown.setAttribute('data-bs-theme', 'dark');
           navbar.setAttribute('data-bs-theme', 'dark');
-          modal_add_feed.setAttribute('data-bs-theme', 'dark');
+          btn_close.setAttribute('data-bs-theme', 'dark');
         }
         else {
           modalHeader.removeAttribute('data-bs-theme');
           dropdown.setAttribute('data-bs-theme');
-          navbarsetAttribute('data-bs-theme');
-          modal_add_feed.setAttribute('data-bs-theme');
+          navbar.setAttribute('data-bs-theme');
+          btn_close.setAttribute('data-bs-theme');
         }
 
         toggleText.textContent = isDarkMode ? "라이트모드" : "다크모드";
@@ -256,5 +256,4 @@
     });
   </script>
 </body>
-
 </html>
