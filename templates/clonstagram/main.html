@@ -60,14 +60,15 @@
       </nav>
     <div class="main_body">
       <div class="left_body">
+        {% for feed in feed_list %}
         <div class="border feed_box">
           <div class="feed_name">
             <div class="profile_box">
-              <img class="profile_img" src="https://asukasaito.jp/files/36/msgapp/images/artist.jpg">
+              <img class="profile_img" src="{{ feed.profile_image }}">
             </div>
-            <span class="feed_name_txt"> jin.99 </span>
+            <span class="feed_name_txt"> {{ feed.user_id }} </span>
           </div>
-          <img class="feed_img" src="https://pics.prcm.jp/33e141ab49230/86120670/jpeg/86120670.jpeg">
+          <img class="feed_img" src="{{ feed.image }}">
           <div class="feed_icon">
             <div>
               <span class="material-symbols-outlined">
@@ -87,11 +88,11 @@
             </div>
           </div>
           <div class="feed_like">
-            <p class="feed_txt"> <b>좋아요 6,974개</b></p>
+            <p class="feed_txt"> <b>좋아요 {{ feed.like_count }}개</b></p>
           </div>
           <div class="feed_content">
             <p class="feed_txt">
-              <b>Saito Asuka</b> 아 시발 꼴린다!
+              <b>{{ feed.user_id }}</b> {{ feed.content }}
             </p>
           </div>
           <div class="feed_reply">
@@ -99,6 +100,7 @@
             <span class="feed_txt"> <b> cho </b> 나도 사랑해 시발 </span>
           </div>
         </div>
+        {% endfor %}
       </div>
       <div class="right_body">
         <div class="feed_name" style="justify-content: space-between">
