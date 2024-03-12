@@ -237,7 +237,3 @@ body.dark-mode .modal-content {
 .dark-mode .feed_box {
     background-color: #121212 !important;
 }
-
-body.dark-mode .modal-dialog .btn-close {
-    color: #fff !important;
-}
