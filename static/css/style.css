@@ -27,10 +27,53 @@
 
 .icon-container .dropdown-menu {
     position: absolute;
-    right: 0;     /* 우측 정렬 */
-    top: 100%;    /* 아이콘 바로 아래에 위치 */
-    width: 150px; /* 원하는 너비 설정 */
+    right: 0;
+    top: 100%;
+    width: 150px;
 }
+
+.dropdown-menu .material-symbols-outlined {
+    margin-right : 4px;
+    vertical-align: -6px
+}
+
+.modal-dialog {
+    max-width: 300px !important;
+    transform: translate(0, 50%);
+    top: 10%;
+    margin: 1.75rem auto;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        transform: translate(0, -50%);
+    }
+}
+
+.modal-body .material-symbols-outlined {
+    margin-right : 4px;
+    vertical-align: -6px
+}
+
+.toggle-text {
+    cursor: pointer;
+    user-select: none;
+}
+.modal-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal-body ul li {
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 0;
+}
+
+.modal-body ul li:last-child {
+    border-bottom: none;
+}
+
 
 .main_body {
     display: flex;
@@ -160,4 +203,41 @@
     color: lightgray;
     display: flex;
     flex-direction: column;
+}
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff;
+}
+
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff;
+}
+
+body.dark-mode .modal-content {
+    background-color: #222;
+    color: #fff; 
+}
+
+.dark-mode .main_body {
+    background-color: #121212 !important;
+}
+
+.dark-mode .navbar {
+    background-color: #121212 !important;
+    color: #ffffff;
+}
+
+.dark-mode .navbar .material-symbols-outlined,
+.dark-mode .navbar .dropdown-menu {
+    color: #ffffff;
+}
+
+.dark-mode .feed_box {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .modal-dialog .btn-close {
+    color: #fff !important;
 }
