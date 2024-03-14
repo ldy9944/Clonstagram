@@ -75,6 +75,23 @@
     border-bottom: none;
 }
 
+.modal_image_upload{
+    outline: 2px dashed rgba(0, 0, 0, 0.3) ;
+    outline-offset:-10px;
+    text-align: center;
+    transition: all .15s ease-in-out;
+    width:780px;
+    height: 548px;
+}
+
+.dark-mode .modal_image_upload{
+    outline: 2px dashed rgba(255, 255, 255, 0.3) ;
+    outline-offset:-10px;
+    text-align: center;
+    transition: all .15s ease-in-out;
+    width:780px;
+    height: 548px;
+}
 
 .main_body {
     display: flex;
